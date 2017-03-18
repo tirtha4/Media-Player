@@ -11,9 +11,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
+		//Creating file object for media source
 		File file=new File("/music.mp3");
+		// Change URI to string format in file
 		 final String source=file.toURI().toString();
-		Player player = new Player(source);
+			Player player = new Player(source);
 				Scene scene = new Scene(player,720,480, Color.BLACK);
 				primaryStage.setScene(scene);
 				primaryStage.show();
