@@ -39,6 +39,7 @@ public class Main extends Application {
 				File file = fileChooser.showOpenDialog(primaryStage);
 				if(file != null) {
 					try {
+						
 						player = new Player(file.toURI().toURL().toExternalForm());
 						Scene scene = new Scene(player,720,580,Color.BLACK);
 						primaryStage.setScene(scene);
@@ -52,10 +53,10 @@ public class Main extends Application {
 	
 		
 		//Creating file object for media source
-		File files =new File("D:/video.mp4");
+		File files =new File("D:/music.mp3");
 		// Change URI to string format in file
 		final String source=files.toURI().toString();
-		Player player = new Player(source);
+		player = new Player(source);
 		player.setTop(menu);
 			Scene scene = new Scene(player,720,580);
 			
