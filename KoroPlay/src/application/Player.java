@@ -18,19 +18,27 @@ public class Player extends BorderPane {
 	public  Player(String file) {
 		media= new Media(file);
 		player = new MediaPlayer(media);
+
 		view = new MediaView(player);
-		
-		pane=new Pane();
+	// Setting mediaView dimension w.r.t the media(video)
+		view.setTranslateX(view.getFitWidth()  / 2 + 50); 
+		view.setTranslateY(view.getFitHeight() / 2 - 13);
+		view.setScaleX(0.90); view.setScaleY(0.95);
+	    //Setting pane location
+	    pane=new Pane();
 		pane.getChildren().add(view);
-		setCenter(pane);
 		
+        	setCenter(pane);
+
+
 		panel=new MediaPanel(player);
-		setStyle("-fx-background-color:#8c8c8c");
+		setStyle("-fx-background-color:BLACK");
 		setBottom(panel);
 		panel.setStyle("-fx-background-color:#ffffff");
 		player.play();
 	}
-//	public MediaPlayer(Media media2) {
+
+	//public MediaPlayer(Media media2) {
 		// TODO Auto-generated constructor stub
 //	}
 
