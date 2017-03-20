@@ -41,6 +41,7 @@ public class Main extends Application {
 					try {
 						
 						player = new Player(file.toURI().toURL().toExternalForm());
+						player.setTop(menu);
 						Scene scene = new Scene(player,720,580,Color.BLACK);
 						primaryStage.setScene(scene);
 					} catch (MalformedURLException e1) {

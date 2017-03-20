@@ -28,7 +28,7 @@ public class Player extends BorderPane {
 	    pane=new Pane();
 		pane.getChildren().add(view);
 		
-        	setCenter(pane);
+      //  	setCenter(pane);
 
 
 		panel=new MediaPanel(player);
